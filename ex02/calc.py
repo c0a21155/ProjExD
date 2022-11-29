@@ -3,12 +3,16 @@ import tkinter.messagebox as tkm
 
 
 def button_click(event):
-    btn = event.widght
+    btn = event.widget
     num = btn["text"]
     tkm.showinfo("", f"[{num}]ボタンが押されました")
+
 #練習1
 root = tk.Tk()
 root.geometry("300x500")
+
+#entry = tk.Entry(root, )
+#entry.insert(tk.END, "fugapiyo")
 
 #練習2
 r, c = 0, 0
