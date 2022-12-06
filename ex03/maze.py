@@ -37,8 +37,7 @@ def main_proc():
     if cx == 1350:
         if cy == 150:
             canvas.coords("kokaton2", cx, cy)
-    if cx == 1350:
-        if cy == 750:
+        elif cy == 750:
             root.destroy()
 
     
