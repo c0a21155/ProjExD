@@ -36,12 +36,12 @@ def main():
     scrn_sfc.blit(bomb_sfc, bomb_rct) 
     vx, vy = +1, +1
 
-    font = pg.font.SysFont("arial", 80)
-    text = font.render("DEATH", True, (255, 0, 0))
+    font = pg.font.SysFont("arial", 80)      #テキストのフォント設定
+    text = font.render("DEATH", True, (255, 0, 0))   #テキストの文字と色の設定
 
 
     while True:
-        vx *= 1.001
+        vx *= 1.001  #爆弾を加速
         vy *= 1.001
         scrn_sfc.blit(pgbg_sfc, pgbg_rct) 
 
@@ -58,7 +58,7 @@ def main():
             tori_rct.centerx -= 1
         if key_dct[pg.K_RIGHT]:
             tori_rct.centerx += 1
-        if key_dct[pg.K_w]:
+        if key_dct[pg.K_w]:            #キーによる爆弾の操作
             if key_dct[pg.K_l]:
                 bomb_rct.centerx -= 2
             if key_dct[pg.K_r]:
@@ -99,7 +99,7 @@ def main():
         vx *= yoko
         vy *= tate
 
-        scrn_sfc.blit(text, (700, 450))
+        scrn_sfc.blit(text, (700, 450))   #テキストを表示
 
         if tori_rct.colliderect(bomb_rct):   #tori_rctとbomb_rctを逆にしてもOK
             return
