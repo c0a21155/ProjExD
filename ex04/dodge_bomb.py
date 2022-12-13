@@ -78,6 +78,10 @@ def main():
         yoko, tate = check_bound(bomb_rct, scrn_rct)
         vx *= yoko
         vy *= tate
+
+        if tori_rct.colliderect(bomb_rct):   #tori_rctとbomb_rctを逆にしてもOK
+            return
+
         pg.display.update()
         clock.tick(1000)
 
