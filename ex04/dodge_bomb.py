@@ -79,8 +79,8 @@ def main():
             if key_dct[pg.K_RIGHT]:
                 tori_rct.centerx -= 1
 
-        #if check_bound(bomb_rct, scrn_rct) != (+2, +2):
-        #   if key_dct[pg.K_w]:
+        #if check_bound(bomb_rct, scrn_rct) != (+2, +2):   キー"w","g"で動かした爆弾を枠外へ出ないようにする。
+        #    if key_dct[pg.K_w]:
         #        if key_dct[pg.K_l]:
         #            bomb_rct.centerx += 2
         #        if key_dct[pg.K_r]:
