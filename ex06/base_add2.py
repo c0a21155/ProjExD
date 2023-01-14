@@ -125,6 +125,9 @@ def check_bound(obj_rct, scr_rct):
     return yoko, tate
 '''
 ↓　C0A21155 橋本健
+
+30秒をカウント(1000fpsなので、30,000フレームをカウント)し、
+30秒が経過した際にクリア画面に遷移するトリガーを作動させる、定義
 '''
 def count_keika(self,scr:Screen):  # 30秒を数える定義
     global count
