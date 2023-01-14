@@ -123,7 +123,9 @@ def check_bound(obj_rct, scr_rct):
     if obj_rct.top < scr_rct.top or scr_rct.bottom < obj_rct.bottom:
         tate = -1
     return yoko, tate
-
+'''
+↓　C0A21155 橋本健
+'''
 def count_keika(self,scr:Screen):  # 30秒を数える定義
     global count
     count += 1  # 1フレーム経つ毎に変数countを1ずつ大きくする
@@ -134,7 +136,9 @@ def count_keika(self,scr:Screen):  # 30秒を数える定義
         print(count)
         print(keika)
         self.game_state == CLEAR    # ステータスをCLEARにする
-
+'''
+↑　C0A21155 橋本健
+'''
 def main():
     clock =pg.time.Clock()
 
@@ -188,7 +192,7 @@ def main():
         schedule.run_pending()
         pg.display.update()
 
-        count_keika()
+        count_keika()   # 30秒数える定義を呼び出す　C0A21155 橋本健
         
         #sleep(1)
         clock.tick(1000)
